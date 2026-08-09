@@ -1,0 +1,43 @@
+# =====================================================================
+# SECRETS / LOCAL CONFIG  --  never commit these
+# =====================================================================
+# Real Wi-Fi credentials, web-workflow password, server URLs, etc.
+settings.toml
+secrets.py
+*.env
+
+# Board-inventory server database (real chip IDs, IPs, hostnames,
+# location descriptions). Ship an empty schema/seed instead.
+board_inventory.db
+*.db
+*.sqlite
+*.sqlite3
+instance/
+
+# =====================================================================
+# CircuitPython local/board state
+# =====================================================================
+boot_out.txt
+boot_dis.py          # renamed boot.py when a board is toggled read-only
+.fseventsd/
+.metadata_never_index
+.Trashes
+*.mpy                # compiled artifacts, if any land in the tree
+
+# =====================================================================
+# macOS
+# =====================================================================
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# =====================================================================
+# Python (server side)
+# =====================================================================
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.pytest_cache/

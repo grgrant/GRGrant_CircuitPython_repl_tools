@@ -1,0 +1,47 @@
+# example_settings.toml
+# ---------------------------------------------------------------------
+# Copy this file to  settings.toml  and fill in your real values.
+# settings.toml is gitignored and must NEVER be committed.
+# ---------------------------------------------------------------------
+
+# ---------------------------------------------------------------------
+# Wi-Fi networks
+#
+# wifi_connection.py tries networks in priority order and (by default)
+# only attempts SSIDs it can actually see in a scan. You can use EITHER
+# of the two styles below, or both together.
+# ---------------------------------------------------------------------
+
+# Style 1 -- single network using CircuitPython's built-in variables.
+# This is treated as priority 0 (tried first).
+CIRCUITPY_WIFI_SSID = "MyHomeNetwork"
+CIRCUITPY_WIFI_PASSWORD = "changeme"
+
+# Style 2 -- multiple networks, tried in numeric order (priority 1, 2, ...).
+# Supports WIFI_SSID0 / WIFI_PASSWORD0 through WIFI_SSID9 / WIFI_PASSWORD9.
+# Handy for a board that roams between home, a workshop, and a phone hotspot.
+WIFI_SSID0 = "OtherHomeNetwork"
+WIFI_PASSWORD0 = "changeme"
+
+WIFI_SSID1 = "MyPhoneHotspot"
+WIFI_PASSWORD1 = "changeme"
+
+# WIFI_SSID2 = "Workshop-2G"
+# WIFI_PASSWORD2 = "changeme"
+# ... up to WIFI_SSID9 / WIFI_PASSWORD9
+
+# ---------------------------------------------------------------------
+# Board identity
+#
+# Used by repl.py / board_inventory.py to name the board. Resolution
+# order is CIRCUITPY_WIFI_HOSTNAME, then CIRCUITPY_WEB_INSTANCE_NAME,
+# then the chip UID as a last resort.
+# ---------------------------------------------------------------------
+CIRCUITPY_WIFI_HOSTNAME = "feather-garage"
+CIRCUITPY_WEB_INSTANCE_NAME = "feather-garage"
+
+# ---------------------------------------------------------------------
+# CircuitPython web workflow (optional)
+# Enables the browser-based editor / REPL over Wi-Fi. Leave unset to disable.
+# ---------------------------------------------------------------------
+CIRCUITPY_WEB_API_PASSWORD = "changeme"

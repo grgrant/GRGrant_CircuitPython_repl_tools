@@ -21,7 +21,6 @@ import gc
 UNIXCMDS=True # This adds ls() cd() pwd() cat() at the expense of some REPL ram
 DATETIMECMDS=True # Adds date(), clock() for time, datetime() cmds
 TZ_OFFSET=None # Put your TZ Offset here (e.g. -5)
-TZ_OFFSET=2
 
 sys.path.append('/bin') # A place for .py utilities to run via import
 

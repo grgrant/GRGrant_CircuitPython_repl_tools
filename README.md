@@ -6,7 +6,8 @@ boot flags stored in NVM**, and a robust multi-network Wi-Fi connection helper.
 
 These files are used across a fleet of ESP32-S3, ESP32-S2, and RP2040-based
 boards. They're deliberately small, CLI-friendly, and self-contained — drop
-them onto a board and go.
+them onto a board and go.  _Exception: for complete functionality also install 
+wifi_connection see below for link._
 
 ## Contents
 
@@ -50,9 +51,11 @@ live there. `nvmflags.py` can live in `/lib` (or `/bin`).
 
 ### Reboot into other modes
 
-`uf2boot()`           # reboot into UF2 bootloader
-`repl.bootloader()`   # reboot into ROM bootloader
-`repl.safemode()`     # reboot into safe mode
+| Cmd                   | Function                     |
+|-----------------------|------------------------------|
+|`uf2boot()`            | reboot into UF2 bootloader   |
+|`bootloader()`         | reboot into ROM bootloader   |
+|`safemode()`           | reboot into safe mode        |
 
 
 ## The NVM flag system
@@ -70,10 +73,12 @@ Two flags ship by default:
 Toggle them from the REPL:
 
 
-`cpro()`          # filesystem read-only to CP, writable from host editor
-`cprw()`          # filesystem read/write to CP
-`autoreload()`    # toggle autoreload (persists across reboots)
-`read_nvm()`      # print current flag states
+| Cmd                   | Function                     |
+|-----------------------|------------------------------|
+|`cpro()`               | filesystem read-only to CP, writable from host editor CIRCUITPY drive |
+|`cprw()`               | filesystem read/write to CP |
+|`autoreload()`         | toggle autoreload (persists across reboots) |
+|`read_nvm()`           | print current flag states |
 
 
 On boards without NVM, `cpro()`/`cprw()` fall back to renaming `boot.py`.

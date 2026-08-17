@@ -4,7 +4,7 @@
 """
 repl.py to setup certain things before entering repl
 """
-__repo__ = "https://github.com/grgrant/CircuitPython_repl_utils.git"
+__repo__ = "https://github.com/grgrant/GRGrant_CircuitPython_repl_tools.git"
 VERSION = "0.9.1"
 print("REPL init (repl.py)", VERSION)
 
